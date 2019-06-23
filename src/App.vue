@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <button @click="goBack">後退</button>
+    <button @click="goAhead">前進</button>
+    <button @click="goIndex">返回首頁</button>
     <div id="nav">
       <router-link to="/">Home</router-link>
       |
@@ -32,7 +35,18 @@
 					'/sub'
 				]
 			}
-		}
+		},
+    methods: {
+			goBack(){
+				this.$router.go(-1)
+      },
+      goAhead(){
+				this.$router.go(+1)
+      },
+      goIndex(){
+				this.$router.push('/')
+      }
+    }
 	}
 </script>
 <style>
@@ -55,5 +69,9 @@
   }
   .fade-leave-active{
     transition: opacity .5s;
+  }
+  button{
+    margin: 0 10px;
+    padding: 0 10px;
   }
 </style>
