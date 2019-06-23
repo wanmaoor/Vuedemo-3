@@ -7,6 +7,9 @@
 - 子路由
 - 單頁面多路由區域操作
 - 路由過渡動畫
+- `mode`的作用和404頁面的處理
+    - `hisotry mode`可以不顯示`#/`
+    - `hash mode`則顯示`#/`
 
 ## Project setup
 ```

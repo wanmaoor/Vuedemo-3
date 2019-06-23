@@ -51,6 +51,10 @@ export default new Router({
 				left: () => import('./components/MultiLeft'),
 				right: () => import('./components/MultiRight')
 			}
+		},
+		{
+			path: '*',
+			component: ()=> import('./components/Err')
 		}
 	]
 })
