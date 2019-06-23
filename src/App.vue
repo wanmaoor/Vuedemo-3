@@ -15,7 +15,9 @@
       |
     </div>
     <p>name傳參: {{$route.name}}</p>
-    <router-view/>
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
     <router-view name="left"></router-view>
     <router-view name="right"></router-view>
   </div>
@@ -28,7 +30,7 @@
 					'/about',
 					'/greet',
 					'/sub'
-        ]
+				]
 			}
 		}
 	}
@@ -41,5 +43,17 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+  .fade-enter{
+    opacity: 0;
+  }
+  .fade-enter-active{
+    transition: opacity .5s;
+  }
+  .fade-leave{
+    opacity: 1;
+  }
+  .fade-leave-active{
+    transition: opacity .5s;
   }
 </style>
