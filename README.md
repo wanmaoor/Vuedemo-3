@@ -5,6 +5,7 @@
 - vue-router的`name`傳參, 雖然不常用
 - 通過把要傳遞的參數綁定`<router-link>`到的`to`屬性的對象裏實現傳參
 - 子路由
+- 單頁面多路由區域操作
 
 ## Project setup
 ```
