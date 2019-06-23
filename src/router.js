@@ -34,9 +34,15 @@ export default new Router({
       children: [
         {
           path: 'son',
+          name: 'son',
           component: () => import('./components/Son')
         }
       ]
+    },
+    {
+      path: '/foo',
+      name: 'foo',
+      component: () => import('./components/Foo')
     }
   ]
 })
