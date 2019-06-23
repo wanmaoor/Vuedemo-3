@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Parent from './components/Parent'
 
 Vue.use(Router)
 
@@ -25,6 +26,17 @@ export default new Router({
       path: '/greet',
       name: 'greet',
       component: () => import('./components/Greet')
+    },
+    {
+      path: '/sub',
+      name: 'sub',
+      component: Parent,
+      children: [
+        {
+          path: 'son',
+          component: () => import('./components/Son')
+        }
+      ]
     }
   ]
 })
