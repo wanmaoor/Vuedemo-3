@@ -1,5 +1,11 @@
 # demo3
 
+## 本項目包含有
+- vue-router初步
+- vue-router的`name`傳參, 雖然不常用
+- 通過把要傳遞的參數綁定`<router-link>`到的`to`屬性的對象裏實現傳參
+- 子路由
+
 ## Project setup
 ```
 npm install
