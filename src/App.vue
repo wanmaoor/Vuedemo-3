@@ -1,12 +1,18 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/greet">Greet</router-link> |
-      <router-link to="/sub">子路由</router-link> |
-      <router-link :to="{name: 'foo', params: {username: 'Joe', job: 'Web developer'}}">綁定傳參</router-link> |
-      <router-link to="/multi">單頁面多路由區域操作</router-link> |
+      <router-link to="/">Home</router-link>
+      |
+      <router-link :to="url[0]">About</router-link>
+      |
+      <router-link :to="url[1]">Greet</router-link>
+      |
+      <router-link :to="url[2]">子路由</router-link>
+      |
+      <router-link :to="{name: 'foo', params: {username: 'Joe', job: 'Web developer'}}">綁定傳參</router-link>
+      |
+      <router-link to="/multi">單頁面多路由區域操作</router-link>
+      |
     </div>
     <p>name傳參: {{$route.name}}</p>
     <router-view/>
@@ -14,14 +20,26 @@
     <router-view name="right"></router-view>
   </div>
 </template>
-
+<script>
+	export default {
+		data() {
+			return {
+				url: [
+					'/about',
+					'/greet',
+					'/sub'
+        ]
+			}
+		}
+	}
+</script>
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>
