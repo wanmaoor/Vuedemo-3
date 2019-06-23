@@ -12,6 +12,8 @@
       |
       <router-link :to="url[2]">子路由</router-link>
       |
+      <router-link :to="url[3]">Vuex</router-link>
+      |
       <router-link :to="{name: 'foo', params: {username: 'Joe', job: 'Web developer'}}">綁定傳參</router-link>
       |
       <router-link to="/multi">單頁面多路由區域操作</router-link>
@@ -32,7 +34,8 @@
 				url: [
 					'/about',
 					'/greet',
-					'/sub'
+					'/sub',
+          '/vuex'
 				]
 			}
 		},

@@ -60,6 +60,11 @@ export default new Router({
 		{
 			path: '*',
 			component: () => import('./components/Err')
+		},
+		{
+			path: '/vuex',
+			name: 'vuex',
+			component: () => import('./components/Vuex')
 		}
 	]
 })
