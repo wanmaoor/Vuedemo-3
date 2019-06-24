@@ -17,6 +17,7 @@
 - Vuex基礎
 - 使用`mapState`把`state`放在組件的`script`裏
 - `mapMutations`
+- `mapGetters`
 
 ## Project setup
 ```
