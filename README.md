@@ -15,6 +15,7 @@
     - 在模板裏寫鈎子函數
 - 頁面的前進後退
 - Vuex基礎
+- 使用`mapState`把`state`放在組件的`script`裏
 
 ## Project setup
 ```

@@ -1,6 +1,6 @@
 <template>
  <div>
-   <h1>{{State.state.count}}</h1>
+   <h1>{{num}}</h1>
    <p>
      <button @click="$store.commit('increment')">Increment</button>
      <button @click="$store.commit('decrement')">Decrement</button>
@@ -10,13 +10,15 @@
 
 <script>
   import State from '@/store'
+  import {mapState} from 'vuex'
 	export default {
 		name: "Vuex",
     data(){
 			return {
 				State
       }
-    }
+    },
+    computed: mapState(['num'])
 	}
 </script>
 
