@@ -1,5 +1,11 @@
 <template>
-  <h1>{{State.state.count}}</h1>
+ <div>
+   <h1>{{State.state.count}}</h1>
+   <p>
+     <button @click="$store.commit('increment')">Increment</button>
+     <button @click="$store.commit('decrement')">Decrement</button>
+   </p>
+ </div>
 </template>
 
 <script>
