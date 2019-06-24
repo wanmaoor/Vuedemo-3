@@ -16,6 +16,8 @@
 - 頁面的前進後退
 - Vuex基礎
 - 使用`mapState`把`state`放在組件的`script`裏
+- `Mutations` 同步修改狀態
+- `Actions` 異步修改狀態
 - `mapMutations`
 - `mapGetters`
 
